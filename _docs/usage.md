@@ -71,7 +71,7 @@ should give you some binary data, e.g.:
 Running:
 
 {% highlight py %}
-s.write_bytes(49758817247232, "frida")
+s.write_bytes(49758817247232, [ord(i) for i in "frida"])
 {% endhighlight %}
 
 should return after it has updated the memory in the target process.
